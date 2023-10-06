@@ -5,7 +5,7 @@ import Backdrop from "./Backdrop";
 const Todo = (props) => {
   const { title } = props;
 
-const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const onClickDelete = () => {
     setModalOpen(true);
@@ -13,7 +13,7 @@ const [modalOpen, setModalOpen] = useState(false);
 
   const closeModal = () => {
     setModalOpen(false);
-  }
+  };
   return (
     <>
       <div className="card">
@@ -24,7 +24,7 @@ const [modalOpen, setModalOpen] = useState(false);
           </button>
         </div>
       </div>
-      {modalOpen && <Modal onCancel={closeModal} onConfirm={closeModal}/>}
+      {modalOpen && <Modal onCancel={closeModal} onConfirm={closeModal} />}
       {modalOpen && <Backdrop cancle={closeModal} />}
     </>
   );
